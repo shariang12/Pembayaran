@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZBond Digital - Solusi Digital Profesional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #007166;
+      --primary-light: #e0f7f5;
+      --primary-dark: #005a52;
+      --secondary: #ffd700;
+      --text: #333333;
+      --text-light: #555555;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -80px;
+      left: -30px;
+      width: 200px;
+      height: 200px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .desc {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      background-color: rgba(255, 215, 0, 0.2);
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-top: 1rem;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--yellow);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: var(--transition);
+      border-top: 4px solid var(--primary);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .service-content {
+      padding: 1.5rem;
+    }
+
+    .service-content h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: var(--primary);
+    }
+
+    .service-content p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-features {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    .service-features li {
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .cta-section {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem 1rem;
+      background: linear-gradient(135deg, var(--primary-light), var(--yellow));
+      border-radius: var(--radius);
+    }
+
+    .cta-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .cta-section p {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      color: var(--text-light);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      box-shadow: 0 4px 10px rgba(0, 113, 102, 0.3);
+    }
+
+    .cta-button:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: var(--primary-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .footer-link {
+      color: var(--white);
+      text-decoration: none;
+      transition: var(--transition);
+      opacity: 0.8;
+    }
+
+    .footer-link:hover {
+      opacity: 1;
+      color: var(--secondary);
+    }
+
+    .social-links {
+      margin: 1.5rem 0;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin: 0 0.5rem;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background-color: var(--secondary);
+      color: var(--text);
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-top: 1.5rem;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #FFDE59;
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+      transition: var(--transition);
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 1.5rem 1rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .desc {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>Zbond Digital</h1>
+      <div class="desc">Solusi Digital <span class="highlight">Profesional</span> untuk Bisnis Anda</div>
+      <div class="tagline">Inovasi | Kreativitas | Kualitas</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-content">
+          <div class="service-icon"></div>
+          <h2>Pembuatan Website</h2>
+          <p>Website profesional untuk semua kebutuhan bisnis Anda, dari company profile hingga toko online.</p>
+          <ul class="service-features">
+            <li>Responsif & Mobile Friendly</li>
+            <li>Optimasi SEO</li>
+            <li>Integrasi Pembayaran</li>
+            <li>CMS Mudah Digunakan</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-content">
+          <div class="service-icon"></div>
+          <h2>Pembuatan Aplikasi</h2>
+          <p>Aplikasi custom untuk kebutuhan bisnis, mulai dari UMKM hingga perusahaan besar.</p>
+          <ul class="service-features">
+            <li>Android & iOS</li>
+            <li>Database Terintegrasi</li>
+            <li>Update Berkala</li>
+            <li>Dukungan Teknis</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-content">
+          <div class="service-icon"></div>
+          <h2>Desain Logo & Branding</h2>
+          <p>Identitas visual yang kuat untuk membangun citra profesional bisnis Anda.</p>
+          <ul class="service-features">
+            <li>Konsep Unik</li>
+            <li>Multiple Revisi</li>
+            <li>File Master Lengkap</li>
+            <li>Style Guide Brand</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-content">
+          <div class="service-icon"></div>
+          <h2>Desain Marketing</h2>
+          <p>Materi promosi cetak dan digital yang menarik untuk meningkatkan penjualan.</p>
+          <ul class="service-features">
+            <li>Brosur & Flyer</li>
+            <li>Banner & Spanduk</li>
+            <li>Social Media Content</li>
+            <li>Presentasi Profesional</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-content">
+          <div class="service-icon"></div>
+          <h2>Perijinan Perusahaan</h2>
+          <p>Bantuan pengurusan dokumen legal untuk bisnis Anda secara lengkap dan profesional.</p>
+          <ul class="service-features">
+            <li>NIB & SIUP</li>
+            <li>PT Perorangan/PT Biasa</li>
+            <li>Yayasan</li>
+            <li>Pendirian CV/UD</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-content">
+          <div class="service-icon"></div>
+          <h2>Digital Marketing</h2>
+          <p>Optimasi media sosial dan strategi pemasaran digital untuk meningkatkan penjualan.</p>
+          <ul class="service-features">
+            <li>Manajemen Media Sosial</li>
+            <li>Content Strategy</li>
+            <li>Iklan Berbayar</li>
+            <li>Analisis Performa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+      <p>Inovasi | Kreativitas | Kualitas</p>
+      
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fas fa-receipt"></i></a>
+        <a href="#" class="social-link"><i class="fas fa-wallet"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 ZBond Digital. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6283852330333" class="whatsapp-button" title="Hubungi Kami via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+          </html>
